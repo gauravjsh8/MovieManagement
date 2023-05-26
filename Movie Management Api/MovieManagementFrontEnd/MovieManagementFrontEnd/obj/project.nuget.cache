@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MB0SQN98U6cQYwGW+kyB886osMnyCBm71f0RpAKbiKJj7wWiEuyVmuo7UPkIh4mpG3uuYwru/kFVAcscM/bInQ==",
+  "dgSpecHash": "5dLW3L50jJOoXLMlMEqg0Dn5G99LL1jY/nabpV7kEoAaY4etLBnMU/w4q7J70LbaFjdFrmiMEXNdOLJT4dUcnA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dell\\Desktop\\Training\\MovieManagement\\Movie Management Api\\MovieManagementFrontEnd\\MovieManagementFrontEnd\\MovieManagementFrontEnd.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

@@ -75,3 +75,4 @@ C:\Users\Dell\Desktop\Training\MovieManagement\Movie Management Api\MovieManagem
 C:\Users\Dell\Desktop\Training\MovieManagement\Movie Management Api\MovieManagementFrontEnd\MovieManagementFrontEnd\obj\Debug\net6.0\MovieManagementFrontEnd.pdb
 C:\Users\Dell\Desktop\Training\MovieManagement\Movie Management Api\MovieManagementFrontEnd\MovieManagementFrontEnd\obj\Debug\net6.0\MovieManagementFrontEnd.genruntimeconfig.cache
 C:\Users\Dell\Desktop\Training\MovieManagement\Movie Management Api\MovieManagementFrontEnd\MovieManagementFrontEnd\obj\Debug\net6.0\ref\MovieManagementFrontEnd.dll
+C:\Users\Dell\Desktop\Training\MovieManagement\Movie Management Api\MovieManagementFrontEnd\MovieManagementFrontEnd\bin\Debug\net6.0\Newtonsoft.Json.dll

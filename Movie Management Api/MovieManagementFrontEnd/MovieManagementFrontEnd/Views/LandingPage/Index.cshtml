@@ -1,0 +1,56 @@
+﻿@model List<MovieManagementFrontEnd.ViewModels.MovieViewModel>
+@{
+    int total = 0;
+    if (Model != null)
+    {
+        var totalInit = Model[0].Total / 6;
+        var totalRemainder = Model[0].Total % 6;
+        if (totalRemainder > 0)
+        {
+            total = totalInit + 1;
+        }
+
+    }
+}
+<div class="container">
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="@item.MediaPath" alt="Movie Image"
+                         style="width: 100%;
+    height: 200px;
+    object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Title</h5>
+                        <p class="card-text">@item.Description</p>
+                        <p class="card-text">Release Year: @item.CreatedDateTime.ToShortDateString()</p>
+                        
+                        <a href="/Movie/ViewMovieById?id=@item.MovieId" class="btn btn-primary" id="detailsView">View Details</a>
+                        <a href="/Movie/DeleteMovie?id=@item.MovieId" class="btn btn-primary" id="deleteMovie">Delete</a>
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+    @*<iframe width="560" height="315" src="Uploads/Rc1.mp4" frameborder="0" allowfullscreen></iframe>*@
+
+    <div class="row">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination" style="justify-content: center">
+                @for (int i = 1; i <= total; i++)
+                {
+                    var currentOffset = (i - 1) * 6;
+                    <li class="page-item"><a class="page-link" href="/LandingPage/Index?limit=6&amp;offset=@currentOffset&amp;searchName=">@i</a></li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>

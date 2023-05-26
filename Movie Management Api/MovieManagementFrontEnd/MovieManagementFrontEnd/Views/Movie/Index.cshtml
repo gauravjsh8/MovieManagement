@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model MovieManagementFrontEnd.ViewModels.MovieViewModel
+<div class="container">
+    <h2>Upload Movie</h2>
+    <form asp-controller="Movie" asp-action="AddMovies" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Movie Title</label>
+            <input required type="text" class="form-control" id="name" asp-for="Title" placeholder="Enter movie title.">
+        </div>
+        <div class="form-group">
+            <label for="text">Movie Description</label>
+            <input required type="text" asp-for="Description" class="form-control" placeholder="Enter movie description.">
+        </div>
+        <div class="form-group">
+            <label for="text">Movie Link</label>
+            <input required type="text" asp-for="MovieLink" class="form-control" placeholder="Enter movie link.">
+        </div>
+        <div class="form-group">
+            <label for="genre">Movie Genre</label>
+            <select class="form-control" id="genre" name="genre" asp-for="Genre">
+                @foreach (var genre in Enum.GetValues(typeof(MovieManagementFrontEnd.Enums.Genre)))
+                {
+                    int genreId = (int)genre;
+                    <option value="@genreId">@genre</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="file">File Upload</label>
+            <div class="input-group">
+                <div class="custom-file">
+                    <input type="file" accept=".jpeg, .jpg, .png"
+                           onchange="previewImage(event)" asp-for="FormFile">
+                    <label class="custom-file-label" for="file">Choose file</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 200px; max-height: 200px;">
+        </div>
+        <button style="margin-top:15px" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<script>
+    //after file upload change it will call this method all the events
+        function previewImage(event){
+//this will catch the input with reference to the event
+var input =event.target;
+//this will get the inage preview image type so that we can map the url to img src
+var preview = document.getElementById('imagePreview');
+// if image has files then only it will go through the condition
+if(input.files && input.files[0]){
+    //this is used t0 read the files and get it details.It is just a library class
+    var reader= new FileReader();
+    //when a event is triggered and the reader will start to execute with the event
+    reader.onload=function(e)
+{
+    //passing the event data to the img src with the id="imagePreview"
+    preview.src=e.target.result;
+    //setting AuthenticatorAssertionResponse StyleSheet of the img to CSSLayerBlockRule so that Image will load with proper size
+    preview.style.display='block';
+}
+//this will read the file and generate the url.Its just a function of the fileReader class and it will read
+//the file as the binary string
+reader.readAsDataURL(input.files[0]);
+}
+
+
+    }
+</script>
